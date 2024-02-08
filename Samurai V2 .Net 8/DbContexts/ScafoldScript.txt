@@ -1,0 +1,2 @@
+﻿//Demo Script
+scaffold-DbContext  "Data Source= 192.168.61.49,1433;Initial Catalog=BoookManagement;User Id=softadmin; password=w23eW@#E;Connection Timeout=30;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "DbContexts/Models" -ContextDir "DbContexts" -Context "BookContexts"  -t tblBook -f

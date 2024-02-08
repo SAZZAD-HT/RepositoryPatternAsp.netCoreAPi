@@ -1,0 +1,34 @@
+version: '3.4'
+
+networks:
+   Samurai:
+    driver: bridge
+
+services:
+  DockerSqlServer:
+    container_name: DockerSqlServer
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 8002:1433
+    environment:
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=Password123
+    networks:
+      - Samurai
+  samuraiv2.net8:
+    container_name: SamuraiAPP
+    image: ${DOCKER_REGISTRY-}samuraiv2net8
+    build:
+      context: .
+      dockerfile: Samurai V2 .Net 8/Dockerfile
+    ports:
+        - 8000:5000
+    depends_on:
+    - DockerSqlServer
+    environment:
+     - DB_HOST=DockerSqlServer
+     - DB_NAME=BoookManagement
+     - DB_SA_PASSWORD=Password123
+    networks:
+      - Samurai
+

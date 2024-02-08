@@ -1,0 +1,21 @@
+﻿Certainly! Here are some commonly used HTTP status codes in ASP.NET Core, along with their corresponding constants in the StatusCodes class:
+200 OK:
+  StatusCodes.Status200OK
+201 Created:
+ -- StatusCodes.Status201Created
+204 No Content:
+  --StatusCodes.Status204NoContent
+400 Bad Request:
+ -- StatusCodes.Status400BadRequest
+401 Unauthorized:
+----StatusCodes.Status401Unauthorized
+403 Forbidden:
+---StatusCodes.Status403Forbidden
+404 Not Found:
+--StatusCodes.Status404NotFound
+500 Internal Server Error:
+--StatusCodes.Status500InternalServerError
+502 Bad Gateway:
+--StatusCodes.Status502BadGateway
+503 Service Unavailable:
+--StatusCodes.Status503ServiceUnavailable

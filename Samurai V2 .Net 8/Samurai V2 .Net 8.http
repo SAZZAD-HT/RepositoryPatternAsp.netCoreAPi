@@ -1,0 +1,6 @@
+@Samurai_V2_.Net_8_HostAddress = http://localhost:5167
+
+GET {{Samurai_V2_.Net_8_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
