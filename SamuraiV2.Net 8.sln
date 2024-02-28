@@ -5,8 +5,6 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiV2.Net 8", "Samurai V2 .Net 8\SamuraiV2.Net 8.csproj", "{71C49818-5C32-4945-B1B5-34BAC0A28119}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{C0633C02-D903-4BDB-8CA5-534F3C276C45}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{71C49818-5C32-4945-B1B5-34BAC0A28119}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71C49818-5C32-4945-B1B5-34BAC0A28119}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71C49818-5C32-4945-B1B5-34BAC0A28119}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0633C02-D903-4BDB-8CA5-534F3C276C45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0633C02-D903-4BDB-8CA5-534F3C276C45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0633C02-D903-4BDB-8CA5-534F3C276C45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0633C02-D903-4BDB-8CA5-534F3C276C45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
