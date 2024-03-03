@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SamuraiV2.Net 8", "Samurai V2 .Net 8\SamuraiV2.Net 8.csproj", "{71C49818-5C32-4945-B1B5-34BAC0A28119}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern", "Samurai V2 .Net 8\RepositoryPattern.csproj", "{71C49818-5C32-4945-B1B5-34BAC0A28119}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
