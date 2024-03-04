@@ -7,40 +7,42 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
 
-builder.Services.AddDbContext<BookContexts>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Development")));
+
+//Enviorment Set For Docker Container  
+
 var DbHost=Environment.GetEnvironmentVariable("DB_HOST");
 var DbName=Environment.GetEnvironmentVariable("DB_NAME");
 var DbPassword=Environment.GetEnvironmentVariable("DB_SA_PASSWORD");
 
-if (DbHost != null)
-    {
-    
-     var connectionString = $"Data Source ={DbHost}; Initial Catalog={DbName};User Id=sa;Password={DbPassword};Connection Timeout=30;";
+if (builder.Environment.IsDevelopment())
+{
+
+    builder.Services.AddDbContext<BookContexts>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Development")));
+
+}
+else
+{
+
      builder.Services.AddDbContext<BookContexts>(options =>
-               options.UseSqlServer(builder.Configuration.GetConnectionString(connectionString)));
-    }
-    else
-    {
+      options.UseSqlServer(builder.Configuration.GetConnectionString("Production")));
+}
 
+DependencyInversion.RegisterServices(builder.Services);
 
-        DependencyInversion.RegisterServices(builder.Services);
-        builder.Services.AddCors(options =>
-                        options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+builder.Services.AddCors(options =>
+                options.AddPolicy("Open", builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
 
-    }
 var app = builder.Build();
-
-
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware<ExceptionMiddleware>();
