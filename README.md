@@ -1,4 +1,4 @@
-# ASP.NET Core Web API with Repository Pattern
+# ASP.NET Core Web API  Repository Pattern
 
 This ASP.NET Core Web API project is built with .NET 8 and utilizes the Repository Pattern for data access. It is designed to be flexible, allowing you to choose between Code-First and Database-First approaches.
 
